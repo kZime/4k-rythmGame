@@ -48,3 +48,6 @@ TagManager:
   - name: notes
     uniqueID: 3355245085
     locked: 0
+  - name: Effects
+    uniqueID: 91635229
+    locked: 0

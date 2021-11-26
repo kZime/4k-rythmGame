@@ -19,7 +19,19 @@ public class NotesObject : MonoBehaviour
         if (Input.GetKeyDown(keyToPress)) {
             if (canBepress) {
                 gameObject.SetActive(false);
-                GameManager.instance.NoteHit();
+                // GameManager.instance.NoteHit();
+
+                // Debug.Log(transform.position.y);
+                if (Mathf.Abs( transform.position.y ) > 0.30) {
+                    Debug.Log("Normal");
+                    GameManager.instance.NormalHit();
+                } else if (Mathf.Abs( transform.position.y ) > 0.15) {
+                    Debug.Log("Good");
+                    GameManager.instance.GoodHit();
+                } else {
+                    Debug.Log("Perfect");
+                    GameManager.instance.PerfectHit();
+                }
             }  
         }
     }
